@@ -1,35 +1,33 @@
 {
-  "modules": {
-    "unsplash": {
-      "enabled": true,
-      "apiEndpoint": "https://api.unsplash.com/photos/random/?client_id=%key",
-      "apiKey": "",
-      "displayLocation": true,
-      "SearchQuery": {
-        "featured": true,
-        "username": "",
-        "orientation": "",
-        "searchTerm": "",
-        "collections": [
-          
-        ]
-      },
-      "ImageType": "raw"
-    },
-    "clock": {
-      "enabled": true,
-      "timeFormat": "hh:mm",
-      "updateInterval": 1000
-    },
-    "lightdm": {
-      "enabled": false,
-      "defaultUserId": 0,
-      "timeout": 10000,
-      "focusPasswordBoxOnKeystroke": true
-    }
-  },
-  "displays": {
-    "width": 3,
-    "height": 1
-  }
+	"modules": {
+		"unsplash": {
+			"enabled": true,
+			"apiEndpoint": "https://api.unsplash.com/photos/random/?client_id=%key",
+			"apiKey": "",
+			"displayLocation": true,
+			"SearchQuery": {
+				"featured": true,
+				"username": "",
+				"orientation": "",
+				"searchTerm": "",
+				"collections": []
+			},
+			"ImageType": "raw"
+		},
+		"clock": {
+			"enabled": true,
+			"timeFormat": "hh:mm",
+			"updateInterval": 1000
+		},
+		"lightdm": {
+			"enabled": false,
+			"defaultUserId": 0,
+			"timeout": 10000,
+			"focusPasswordBoxOnKeystroke": true
+		}
+	},
+	"displays": {
+		"width": 1,
+		"height": 1
+	}
 }

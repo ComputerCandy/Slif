@@ -1,3 +1,5 @@
 settings.json
-node_modules
+current.log
+dist/
+node_modules/
 src/config.json
