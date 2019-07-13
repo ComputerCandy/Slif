@@ -11,7 +11,9 @@ Module Type: `Foreground`
 Should the clock be displayed?
 
 Type: `boolean`
+
 Allowed Values: `true`, `false`
+
 Default: `true`
 
 ### timeFormat
@@ -19,6 +21,7 @@ Default: `true`
 timeFormat tells the clock module how to display the time, the formatting is losely based on the [.NET DateTime format string](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)
 
 Type: `string`
+
 Default: `hh:mm`
 
 ## updateInterval

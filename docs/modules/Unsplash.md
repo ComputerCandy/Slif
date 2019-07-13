@@ -12,7 +12,9 @@ Module Type: `Background`
 Should the background be picked from Unsplash?
 
 Type: `boolean`
+
 Allowed Values: `true`, `false`
+
 Default: `true`
 
 ### apiEndpoint
@@ -29,13 +31,16 @@ The API key we use to query Unsplash's API
 To obtain an API key, see [Obtaining an API Key](#obtaining-an-api-key)
 
 Type: `string`
+
 Default: `empty`
 
 ### displayLocation
 
 Do we display the location if the image is tagged with one?
 Type: `boolean`
+
 Allowed Values: `true`, `false`
+
 Default: `true`
 
 ### SearchQuery
@@ -48,7 +53,9 @@ Type: `object`
 ### Image Type
 
 Type: `string`
+
 Allowed Values: `raw`, `full`, `regular`, `small`, `thumb`
+
 Default: `raw`
 
 ## Config Example
