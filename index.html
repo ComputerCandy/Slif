@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SLIF</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Font Awesome :D-->
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+            <div class="unsplash">
+                <div class="image"></div>
+                
+            </div>
+        </div>
+        
+        <div class="foreground">
+            <div class="module">
+                <div class="clock">
+                    <div class="time"></div>
+                </div>
+            </div>
+            <div class="module">
+                <div class="unsplash">
+                    <div class="floating">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt icon"></i>
+                            <div class="text">Wellington, New Zealand</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="module">
+                <div class="lightdm lightdm-mini">
+                    <div class="left">
+                        <img src="img/profile_placehold.jpg" class="profile" id="lightdm-profile">
+                    </div>
+                    <form action="#" id="lightdm-form" method="dialog">
+                        <div class="flexDown">
+                            <div class="displayName">
+                                <select name="user" id="lightdm-un" tabindex="1">
+                                    <option value="0">John Doe</option>
+                                    <option value="1">Jane Doe</option>
+                                </select>
+                            </div>
+                            
+                            <div class="password">
+                                <input type="password" placeholder="Password" tabindex="2" id="lightdm-pw">
+                            </div>
+                            <div class="signIn">
+                                <button type="submit" tabindex="3">
+                                    <i class="fa fa-sign-in-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="modules/unsplash.js"></script>
+    <script src="modules/clock.js"></script>
+    <script src="modules/lightdm.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>
+

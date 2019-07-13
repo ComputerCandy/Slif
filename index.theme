@@ -1,0 +1,6 @@
+[theme]
+name=Slif
+description=LightDM Theme
+engine=lightdm-webkit-greeter
+url=index.html
+session=openbox

@@ -1,0 +1,232 @@
+$displayCountX: 3;
+$displayCountY: 1;
+
+@function svw($size) {
+	@return $size / $displayCountX;
+}
+
+@function svh($size) {
+	@return $size / $displayCountY;
+}
+
+@font-face {
+	font-family: oxygen;
+	font-weight: 300;
+	src: url(webfonts/Oxygen-Light.ttf);
+}
+
+body {
+	overflow: hidden;
+
+	.container {
+		.background {
+			z-index: -300;
+
+			.unsplash {
+				.image {
+					background-color: #ff0000;
+					background-repeat: space;
+					background-attachment: fixed;
+					background-size: cover;
+					background-position: center 60%;
+
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100vw;
+					height: 100vh;
+					animation: blur-out 0.4s;
+				}
+			}
+
+			&-blur {
+				.unsplash {
+					.image {
+						filter: blur(5px);
+						transform: scale(1.15);
+						animation: blur-in 0.4s;
+					}
+				}
+			}
+		}
+
+		.foreground {
+			.module {
+				.unsplash {
+					.floating {
+						.location {
+							color: rgba(255, 255, 255, 0.7);
+							font-size: svh(3vh);
+
+							.icon {
+							}
+
+							.text {
+								display: inline;
+							}
+						}
+
+						position: absolute;
+						bottom: svh(20vh);
+						right: svw(10vw);
+					}
+				}
+
+				.clock {
+					font-family: oxygen;
+					font-weight: 300;
+					font-size: svh(10vh);
+
+					color: rgba(255, 255, 255, 0.7);
+					position: absolute;
+					bottom: svh(5vh);
+					left: svw(5vw);
+				}
+
+				.lightdm {
+					position: absolute;
+					top: svh(20vh);
+					left: svw(5vw);
+					padding: svh(2vh) svh(2vh) svh(2vh) svh(2vh);
+					background-color: rgba(0, 0, 0, 0.2);
+					display: flex;
+					width: svw(22vw);
+
+					&-mini {
+						width: svh(7vh);
+						height: svh(7vh);
+						overflow: hidden;
+						animation-name: lightdm-slidein;
+						animation-duration: 0.4s;
+					}
+
+					&-large {
+						animation-name: lightdm-slideout;
+						animation-duration: 0.4s;
+					}
+
+					.displayName {
+						select::-ms-expand {
+							display: none;
+						}
+
+						select {
+							background: rgba(0, 0, 0, 0.05);
+							border-radius: 20px;
+							padding-left: svw(1vw);
+							-webkit-appearance: none;
+							appearance: none;
+							color: rgba(255, 255, 255, 0.7);
+							display: inline-block;
+							font-size: svh(2vh);
+							width: 100%;
+
+							background: none;
+							border: 0;
+						}
+					}
+
+					.password {
+						width: 80%;
+						display: inline-flex;
+
+						input::placeholder {
+							color: rgba(255, 255, 255, 0.7);
+						}
+
+						input {
+							margin-top: svh(0.5vh);
+							font-size: svh(2vh);
+							width: 100%;
+							background: rgba(0, 0, 0, 0.05);
+							border: 0;
+							border-radius: 20px;
+							padding-left: svw(1vw);
+							color: rgba(255, 255, 255, 0.7);
+						}
+					}
+
+					.signIn {
+						display: inline;
+						margin-left: svw(1vw);
+
+						button {
+							color: rgba(255, 255, 255, 0.7);
+							margin-top: svh(0.5vh);
+							font-size: svh(2vh);
+							border-radius: 20px;
+							border: none;
+							background: rgba(0, 0, 0, 0.05);
+						}
+					}
+
+					.profile {
+						height: svh(7vh);
+						width: svh(7vh);
+						border-radius: 100%;
+						margin-right: svw(2vw);
+					}
+
+					border-radius: 5px;
+				}
+			}
+
+			width: svw(100vw);
+			height: svh(100vh);
+			left: svw(100vw);
+			top: 0;
+			position: absolute;
+			//monitor stufffs
+		}
+	}
+}
+
+@keyframes lightdm-slideout {
+	0% {
+		width: svh(7vh);
+		height: svh(7vh);
+		overflow: hidden;
+	}
+
+	100% {
+		width: svw(22vw);
+		overflow: hidden;
+	}
+}
+
+@keyframes lightdm-slidein {
+	100% {
+		width: svh(7vh);
+		height: svh(7vh);
+		overflow: hidden;
+	}
+
+	0% {
+		width: svw(22vw);
+		overflow: hidden;
+	}
+}
+
+@keyframes blur-in {
+	100% {
+		filter: blur(5px);
+		transform: scale(1.15);
+	}
+
+	0% {
+		transform: scale(1);
+		filter: blur(0px);
+	}
+}
+
+@keyframes blur-out {
+	0% {
+		filter: blur(5px);
+		transform: scale(1.15);
+	}
+
+	100% {
+		transform: scale(1);
+		filter: blur(0px);
+	}
+}
