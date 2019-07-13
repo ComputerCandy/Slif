@@ -6,13 +6,13 @@ Slif contains a modular design, allowing for
 
 ## Installing
 ### LightDM
-1. Download the latest build from [here](https://github.com/ComputerCandy/Slif/archive/master.zip)
-2. Extract the build
-3. Make sure that `lightdm-webkit2-greeter (v2.2.5)` is installed
-4. Make sure the install file has execute permissions `$ chmod +x ./install.sh`
-5. Make a copy of `settings.template.json` and tweak to your likings
-6. Run `$ ./install.sh [config file]`
-7. Edit `/etc/lightdm/lightdm-webkit2-greeter.conf` and change `theme` to `slif` and set `secure_mode` to `false`
+ 1. Download the latest build from [here](https://github.com/ComputerCandy/Slif/archive/master.zip)
+ 2. Extract the build
+ 3. Make sure that `lightdm-webkit2-greeter (v2.2.5)` is installed
+ 4. Make sure the install file has execute permissions `$ chmod +x ./install.sh`
+ 5. Make a copy of `settings.template.json` and tweak to your likings
+ 6. Run `$ ./install.sh [config file]`
+ 7. Edit `/etc/lightdm/lightdm-webkit2-greeter.conf` and change `theme` to `slif` and set `secure_mode` to `false`
 
 ## Screenshots
 ![Screenshot 1](/screenshots/1.png?raw=true)
