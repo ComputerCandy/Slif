@@ -1,4 +1,4 @@
-exports.unsplash = function (config){
+exports.unsplash = function(config){
 	this.disable = function(){
 		$('.foreground .module .unsplash').parent().hide();
 	};
@@ -9,9 +9,9 @@ exports.unsplash = function (config){
 			var parameters = '';
 			var s = config.SearchQuery;
 			if (s.featured) parameters += '&featured';
-			if (s.username != '') parameters += '&username=' + s.username;
-			if (s.orientation != '') parameters += '&orientation=' + s.orientation;
-			if (s.searchTerm != '') parameters += '&query=' + s.searchTerm;
+			if (s.username !== '') parameters += '&username=' + s.username;
+			if (s.orientation !== '') parameters += '&orientation=' + s.orientation;
+			if (s.searchTerm !== '') parameters += '&query=' + s.searchTerm;
 			if (s.collections.length > 0) {
 				parameters += '&collections=';
 				s.collections.forEach((c) => {
@@ -21,7 +21,6 @@ exports.unsplash = function (config){
 			}
 
 			var url = config.apiEndpoint.replace('%key', config.apiKey) + parameters;
-			console.log('[Unsplash] Fetching: ' + url);
 			return url;
 		};
 

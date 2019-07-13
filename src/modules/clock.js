@@ -1,16 +1,4 @@
 exports.clock = function(config){
-	this.init = function(){
-		setInterval(function(){
-			var d = new Date();
-			var formatted = formatDate(d, config.timeFormat);
-			
-			$('.clock .time').text(formatted);
-		}, config.updateInterval);
-	};
-
-	this.disable = function(){
-		$('.module .clock').first().parent().hide();
-	};
 	//Taken from some stackoverflow thread :/
 	function formatDate(date, format, utc){
 		var MMMM = [
@@ -92,7 +80,7 @@ exports.clock = function(config){
 		format = format.replace(/(^|[^\\])HH+/g, '$1' + ii(H));
 		format = format.replace(/(^|[^\\])H/g, '$1' + H);
 
-		var h = H > 12 ? H - 12 : H == 0 ? 12 : H;
+		var h = H > 12 ? H - 12 : H === 0 ? 12 : H;
 		format = format.replace(/(^|[^\\])hh+/g, '$1' + ii(h));
 		format = format.replace(/(^|[^\\])h/g, '$1' + h);
 
@@ -140,6 +128,19 @@ exports.clock = function(config){
 
 		return format;
 	}
+
+	this.init = function(){
+		setInterval(function(){
+			var d = new Date();
+			var formatted = formatDate(d, config.timeFormat);
+
+			$('.clock .time').text(formatted);
+		}, config.updateInterval);
+	};
+
+	this.disable = function(){
+		$('.module .clock').first().parent().hide();
+	};
 
 	return this;
 };

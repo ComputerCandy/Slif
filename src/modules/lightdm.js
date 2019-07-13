@@ -1,4 +1,4 @@
-exports.lightdm = function (config){
+exports.lightdm = function(config){
 	var ldm = window.lightdm;
 	var selectedUser = ldm.users[0];
 	var password = null;
@@ -42,7 +42,7 @@ exports.lightdm = function (config){
 	};
 
 	window.authentication_complete = function(){
-		if (lightdm.is_authenticated) {
+		if (ldm.is_authenticated) {
 			console.log('Logged in!');
 			ldm.login(ldm.authentication_user, ldm.default_session);
 		}
@@ -109,6 +109,7 @@ exports.lightdm = function (config){
 */
 if (!('lightdm' in window)) {
 	window.lightdm = {};
+	lightdm = window.lightdm;
 	lightdm.hostname = 'test-host';
 	lightdm.languages = [
 		{
@@ -283,6 +284,7 @@ if (!('lightdm' in window)) {
 			if (!lightdm._timed_login_cancelled()) timed_login();
 		}, lightdm.timed_login_delay);
 	}
+	window.lightdm = lightdm;
 }
 // Helper functions
 var _lightdm_mock_check_argument_length = function(args, length){

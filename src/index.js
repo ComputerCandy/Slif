@@ -15,7 +15,7 @@ $(document).ready(function(){
 	if (settings.modules.unsplash.enabled) m.init();
 	else m.disable();
 
-	var m = clock.clock(settings.modules.clock);
+	m = clock.clock(settings.modules.clock);
 	if (settings.modules.clock.enabled) m.init();
 	else m.disable();
 
