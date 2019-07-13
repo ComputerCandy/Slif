@@ -1,2 +1,3 @@
-settings.js
+settings.json
 node_modules
+src/config.json

@@ -20,6 +20,9 @@
   "devDependencies": {
     "css-loader": "^3.0.0",
     "file-loader": "^4.0.0",
+    "font-awesome-webpack": "0.0.5-beta.2",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
     "node-sass": "^4.12.0",
     "node-sass-json-importer": "^4.1.0",
     "sass-loader": "^7.1.0",
