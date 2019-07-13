@@ -109,7 +109,7 @@ exports.lightdm = function(config){
 */
 if (!('lightdm' in window)) {
 	window.lightdm = {};
-	lightdm = window.lightdm;
+	var lightdm = window.lightdm;
 	lightdm.hostname = 'test-host';
 	lightdm.languages = [
 		{
