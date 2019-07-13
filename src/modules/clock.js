@@ -1,8 +1,9 @@
-function clock(config){
+exports.clock = function(config){
 	this.init = function(){
 		setInterval(function(){
 			var d = new Date();
 			var formatted = formatDate(d, config.timeFormat);
+			
 			$('.clock .time').text(formatted);
 		}, config.updateInterval);
 	};
@@ -141,4 +142,4 @@ function clock(config){
 	}
 
 	return this;
-}
+};

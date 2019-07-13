@@ -1,4 +1,4 @@
-var lightdmModule = function(config){
+exports.lightdm = function (config){
 	var ldm = window.lightdm;
 	var selectedUser = ldm.users[0];
 	var password = null;

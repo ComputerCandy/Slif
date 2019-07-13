@@ -1,0 +1,33 @@
+{
+  "name": "lightdm-slif",
+  "version": "1.0.0",
+  "description": "Login screen",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ComputerCandy/Slif.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ComputerCandy/Slif/issues"
+  },
+  "homepage": "https://github.com/ComputerCandy/Slif#readme",
+  "devDependencies": {
+    "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "node-sass": "^4.12.0",
+    "node-sass-json-importer": "^4.1.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

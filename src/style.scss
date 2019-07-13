@@ -1,5 +1,4 @@
-$displayCountX: 3;
-$displayCountY: 1;
+@import "config.scss";
 
 @function svw($size) {
 	@return $size / $displayCountX;
@@ -173,8 +172,8 @@ body {
 
 			width: svw(100vw);
 			height: svh(100vh);
-			left: svw(100vw);
-			top: 0;
+			left: svw(100vw) * floor($displayCountX / 2);
+			top: svh(100vh) * floor($displayCountY / 2);
 			position: absolute;
 			//monitor stufffs
 		}

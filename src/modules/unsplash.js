@@ -1,4 +1,4 @@
-var unsplash = function(config){
+exports.unsplash = function (config){
 	this.disable = function(){
 		$('.foreground .module .unsplash').parent().hide();
 	};
