@@ -9,5 +9,5 @@ A Lockscreen designed for LightDM, but made to work with other platforms
 2. Make sure the install file has execute permissions `$ chmod +x ./install.sh`
 3. Run `$ ./install.sh`
 
-##Screenshots
+## Screenshots
 ![Slif on 3 screens](/screenshots/1.jpg?raw=true "Slif used over 3 screens")
