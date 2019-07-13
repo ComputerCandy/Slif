@@ -1,8 +1,6 @@
-var settings = require('./config.json');
-
-//var lightdmModule = require("./modules/lightdm.js");
-//var clock = require("./modules/clock.js");
-//var unsplash = require("./modules/unsplash.js");
+var settings = {};
+var compileMode = require('./compilemode.js');
+if (compileMode == 'lightdm') settings = require('./config.json');
 
 import lightdmModule from './modules/lightdm.js';
 import clock from './modules/clock.js';

@@ -2,3 +2,4 @@ settings.json
 current.log
 node_modules/
 src/config.json
+dist/

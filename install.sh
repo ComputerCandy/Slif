@@ -35,7 +35,7 @@ printf "DONE\n"
 
 printf "Copying in extras: "
 cp ./src/index.html ./dist/index.html
-cp ./src/index.theme ./dist/index.theme
+cp ./src/systens/lightdm/* ./dist/*
 cp ./src/img/ ./dist/img/ -r
 printf "DONE\n"
 
